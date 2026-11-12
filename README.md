@@ -33,10 +33,10 @@ All findings show associations, not proof of cause. See *Assumptions and limitat
 
 | Phase | Work | Output |
 |---|---|---|
-| 1. Cleaning | Loaded and profiled all 24 tables, then checked and fixed the 20 data-quality issues in the project's issue log. 18 of 20 matched the log exactly; the two that did not (missing emails: 744 found vs 760 logged; capitalisation errors: 560 vs 570) are reported as not reproducible. An 11-check self-test confirms the saved clean files. | `notebooks/Phase1_DataCleaning_Swetha.ipynb` |
-| 2. EDA | 10 charts on churn by segment, billing cycle, tenure, complaints, state, data usage, plan price, network quality and retention campaigns, each with a written observation. | `notebooks/Phase2_EDA_Swetha.ipynb`, `charts/` |
-| 3. KPIs | 10 KPIs calculated month by month over April 2025 to March 2026, with a summary table against the targets. | `notebooks/Phase3_KPIs_Swetha.ipynb` |
-| 4. Dashboard and report | Flat tables prepared for Power BI, a 5-page interactive dashboard with synced segment slicers, and a management report for the Chief Customer Officer. | `notebooks/Phase4_DataPrep_Swetha.ipynb`, `dashboard/`, `report/` |
+| 1. Cleaning | Loaded and profiled all 24 tables, then checked and fixed the 20 data-quality issues in the project's issue log. 18 of 20 matched the log exactly; the two that did not (missing emails: 744 found vs 760 logged; capitalisation errors: 560 vs 570) are reported as not reproducible. An 11-check self-test confirms the saved clean files. | `Phase1_DataCleaning_Swetha.ipynb` |
+| 2. EDA | 10 charts on churn by segment, billing cycle, tenure, complaints, state, data usage, plan price, network quality and retention campaigns, each with a written observation. | `Phase2_EDA_Swetha.ipynb` and the chart PNG files |
+| 3. KPIs | 10 KPIs calculated month by month over April 2025 to March 2026, with a summary table against the targets. | `Phase3_KPIs_Swetha.ipynb` |
+| 4. Dashboard and report | Flat tables prepared for Power BI, a 5-page interactive dashboard with synced segment slicers, and a management report for the Chief Customer Officer. | `Phase4_DataPrep_Swetha.ipynb`, `Phase4_Dashboard_Swetha.pbix`, `Phase4_Report_Swetha.pdf` |
 
 ### Dashboard pages
 
@@ -57,23 +57,18 @@ All findings show associations, not proof of cause. See *Assumptions and limitat
 - **Data questions for the business:** 251 customers marked Churned still hold an active subscription, 52 active subscriptions start after 31 March 2026, and 2,947 contracts are past their end date but still show Active or Pending.
 - **Map visuals were disabled** on the machine used to build the dashboard, so a bar chart of dropped-call rate by state replaces the planned network map.
 
-## Repository structure
+## Files in this repository
 
-```
-nexatel-customer-churn-analytics/
-├── README.md
-├── notebooks/
-│   ├── Phase1_DataCleaning_Swetha.ipynb
-│   ├── Phase2_EDA_Swetha.ipynb
-│   ├── Phase3_KPIs_Swetha.ipynb
-│   └── Phase4_DataPrep_Swetha.ipynb
-├── dashboard/
-│   └── Phase4_Dashboard_Swetha.pbix
-├── report/
-│   └── Phase4_Report_Swetha.pdf
-├── charts/            (PNG charts from Phase 2 and Phase 3)
-└── screenshots/       (images of the 5 dashboard pages)
-```
+| File | What it is |
+|---|---|
+| `Phase1_DataCleaning_Swetha.ipynb` | Phase 1: data loading, profiling, cleaning and the data quality report |
+| `Phase2_EDA_Swetha.ipynb` | Phase 2: 10 exploratory charts with observations |
+| `Phase3_KPIs_Swetha.ipynb` | Phase 3: 10 KPIs calculated month by month |
+| `Phase4_DataPrep_Swetha.ipynb` | Phase 4: builds the flat tables used by the dashboard |
+| `Phase4_Dashboard_Swetha.pbix` | Phase 4: the 5-page Power BI dashboard (open in Power BI Desktop) |
+| `Phase4_Report_Swetha.pdf` | Phase 4: management report for the Chief Customer Officer |
+| `chart*.png`, `kpi_*.png` | The PNG charts saved by the Phase 2 and Phase 3 notebooks |
+| `README.md` | This file |
 
 The raw and cleaned data files are not included in this repository.
 
@@ -81,7 +76,7 @@ The raw and cleaned data files are not included in this repository.
 
 1. Upload the project's data files to Google Drive in `MyDrive/NexaTel/data/`.
 2. Open the notebooks in Google Colab and run them in order: Phase 1, Phase 2, Phase 3, then Phase 4 data prep. Each notebook reads the previous phase's cleaned files from Drive.
-3. Open `dashboard/Phase4_Dashboard_Swetha.pbix` in Power BI Desktop (Windows). The data is saved inside the file.
+3. Open `Phase4_Dashboard_Swetha.pbix` in Power BI Desktop (Windows). The data is saved inside the file.
 
 ## Tools
 
