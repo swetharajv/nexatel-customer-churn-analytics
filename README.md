@@ -40,6 +40,7 @@ All the files are in the main folder.
 | `Phase4_Dashboard_Swetha.pbix` | Phase 4: the 5-page Power BI dashboard (open it in Power BI Desktop) |
 | `Phase4_Report_Swetha.pdf` | Phase 4: the management report |
 | `README.md` | This file |
+| `chart01a_churn_kpi.png` to `chart10_retention_outcomes.png` | The 10 charts from Phase 2, saved as images |
 
 I have not included the data files.
 
